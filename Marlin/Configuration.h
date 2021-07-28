@@ -600,13 +600,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  23.34,  23.34 }
-    #define DEFAULT_Ki_LIST {   1.85,   1.85 }
-    #define DEFAULT_Kd_LIST {  73.55,  73.55 }
+    #define DEFAULT_Kp_LIST {  26.4594,  26.4594 }
+    #define DEFAULT_Ki_LIST {   2.0627,   2.0627 }
+    #define DEFAULT_Kd_LIST {  84.8520,  84.8520 }
   #else
-    #define DEFAULT_Kp  23.34
-    #define DEFAULT_Ki   1.85
-    #define DEFAULT_Kd  73.55
+    #define DEFAULT_Kp  26.4594
+    #define DEFAULT_Ki   2.0627
+    #define DEFAULT_Kd  84.8520
   #endif
 #endif // PIDTEMP
 
@@ -644,9 +644,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   // BIQU B1
-  #define DEFAULT_bedKp 100.65
-  #define DEFAULT_bedKi 14.82
-  #define DEFAULT_bedKd 455.69
+  #define DEFAULT_bedKp 159.0882
+  #define DEFAULT_bedKi  31.1938
+  #define DEFAULT_bedKd 540.8999
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -889,7 +889,7 @@
  *
  * :[2,3,4,5,6,7]
  */
-//#define ENDSTOP_NOISE_THRESHOLD 4
+//#define ENDSTOP_NOISE_THRESHOLD 2
 
 // Check for stuck or disconnected endstops during homing moves.
 //#define DETECT_BROKEN_ENDSTOP
@@ -926,7 +926,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 120, 120, 5, 75 }
+#define DEFAULT_MAX_FEEDRATE          { 120, 120, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -2419,6 +2419,11 @@
 // https://reprap.org/wiki/MKS_MINI_12864
 //
 //#define MKS_MINI_12864
+
+//
+// MKS MINI12864 V3 is an alias for FYSETC_MINI_12864_2_1. Type A/B. NeoPixel RGB Backlight.
+//
+//#define MKS_MINI_12864_V3
 
 //
 // MKS LCD12864A/B with graphic controller and SD support. Follows MKS_MINI_12864 pinout.
